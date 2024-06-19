@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="startCard">
+            <h1>Welcome to Ninja's Quizz.</h1>
+            <h3>Rules:</h3>
+            <ul class="rules-list">
+                <li>Your quiz will be end in 1 minute.</li>
+                <li>Your quiz will contain infinte number of questions as we are fetching them from API</li>
+                <li>You would be provided 10 marks for every correct answer.</li>
+                <li>There is no negative marking.</li>
+                <li>At the end of the game, your score will be displayed.</li>
+            </ul>
+            <button id="startQuiz">Start Quiz</button>
+        </div>
+
+        <div class="quiz-container" id="quizContainer" style="display: none;">
+            
+            <div class="quiz-content">
+                <h2 id="question">Question text</h2>
+                <ul>
+                    <li>
+                        <button class="answer" id="a">Answer</button>
+                    </li>
+                    <li>
+                        <button class="answer" id="b">Answer</button>
+                    </li>
+                    <li>
+                        <button class="answer" id="c">Answer</button>
+                    </li>
+                    <li>
+                        <button class="answer" id="d">Answer</button>
+                    </li>
+                </ul>
+
+                <div class="header">
+                    Time left:
+                <span id="timer">60 </span> seconds
+            </div>
+
+            <div class="score">Score: <span id="score">0</span></div>
+            </div>
+        </div>
+
+        <div class="card" id="endCard" style="display: none;">
+            <h1 class="game">Game Over!</h1>
+            <p>Improve your knowledge by playing it again and again.</p>
+            <h3>You were excellent during the quiz</h3>
+            <div class="score-container ">
+            <div class="score-box">
+                    <h3>Your score: <span id="finalScore">0</span></h3>
+                </div>
+                </div>
+            <button id="playAgain">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
